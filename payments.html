@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="payments.css" />
+    <link rel="icon" type="image/png" href="\images\favicon-32x32.png" />
+    <title>CashWise</title>
+  </head>
+  <body>
+    
+    
+    <!-- <a href="#" class="nav">
+      <div class="one"></div>
+      <div class="two"></div>
+      <div class="three"></div>
+    </a> -->
+    <div id="menu">
+      <h1 href="dashboard.html">
+        <img
+          src="\images\favicon-32x32.png"
+          alt="Favicon"
+          style="width: 40px; height: 40px; vertical-align: middle"
+        />
+        CashWise
+      </h1>
+      <!-- Left group of links -->
+      <div class="left-links">
+        <a href="dashboard.html">Home</a>
+          <a href="referrals.html">Referrals</a>
+          <a href="payments.html">Payments</a>
+          <a href="task.html">Tasks</a>
+  </div>
+
+  <!-- Right group of links -->
+  <div class="right-links">
+    <a href="Account.html"><b>Account</b></a>
+          <a href="#"><b>Support</b></a>
+  </div>
+        <svg
+        class="menu-btn"
+        id="set-image"
+        id="hamburgerIcon"
+        onclick="toggleMenu()" 
+        xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+      
+        <svg
+        id="closeIcon"
+        display: none;
+        xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+        
+      
+      </button>
+      <div id="menuContent" class="menu-content">
+        <a href="dashboard.html">Home</a>
+        <a href="referrals.html">Referrals</a>
+        <a href="payments.html">Payments</a>
+        <a href="task.html">Tasks</a><br><br>
+        <a href="Account.html">Account</a>
+        <a href="#">Support</a>
+        
+      </div>
+    
+    <div id="overlay"></div>
+    <div>
+      <!-- Settings Icon -->
+      <!-- <div class="settings-icon" id="settingsIcon" class="switch"> -->
+        <svg
+          class="settings-icon"
+          id="settingsIcon"
+          class="switch"
+          xmlns="http://www.w3.org/2000/svg"
+          height="24px"
+          viewBox="0 -960 960 960"
+          width="24px"
+          fill="#5f6368"
+        >
+          <path
+            d="m370-80-16-128q-13-5-24.5-12T307-235l-119 50L78-375l103-78q-1-7-1-13.5v-27q0-6.5 1-13.5L78-585l110-190 119 50q11-8 23-15t24-12l16-128h220l16 128q13 5 24.5 12t22.5 15l119-50 110 190-103 78q1 7 1 13.5v27q0 6.5-2 13.5l103 78-110 190-118-50q-11 8-23 15t-24 12L590-80H370Zm70-80h79l14-106q31-8 57.5-23.5T639-327l99 41 39-68-86-65q5-14 7-29.5t2-31.5q0-16-2-31.5t-7-29.5l86-65-39-68-99 42q-22-23-48.5-38.5T533-694l-13-106h-79l-14 106q-31 8-57.5 23.5T321-633l-99-41-39 68 86 64q-5 15-7 30t-2 32q0 16 2 31t7 30l-86 65 39 68 99-42q22 23 48.5 38.5T427-266l13 106Zm42-180q58 0 99-41t41-99q0-58-41-99t-99-41q-59 0-99.5 41T342-480q0 58 40.5 99t99.5 41Zm-2-140Z"
+          />
+        </svg>
+      </div>
+    </div>
+      <!-- Settings Panel -->
+      <div class="settings-panel" id="settingsPanel">
+        <p>Theme mode</p>
+        <div class="toggle-container">
+          <span class="label">Light</span>
+          <label class="switch">
+            <input type="checkbox" id="modeToggle" />
+            <span class="slider"></span>
+          </label>
+          <span class="label">Dark</span>
+        </div>
+        
+      </div>
+      
+    </div>
+
+    <div class="paymentscenter">
+        <p>Payment Center</p>
+    </div>
+    <div class="worldtag">
+        <div class="div">
+        <p>
+            <svg xmlns="http://www.w3.org/2000/svg" height="80px" viewBox="0 -960 960 960" width="80px" fill="aqua"><path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm-40-82v-78q-33 0-56.5-23.5T360-320v-40L168-552q-3 18-5.5 36t-2.5 36q0 121 79.5 212T440-162Zm276-102q20-22 36-47.5t26.5-53q10.5-27.5 16-56.5t5.5-59q0-98-54.5-179T600-776v16q0 33-23.5 56.5T520-680h-80v80q0 17-11.5 28.5T400-560h-80v80h240q17 0 28.5 11.5T600-440v120h40q26 0 47 15.5t29 40.5Z"/></svg>
+        </p>
+    </div>
+        <div class="accountbalancetag">
+            <h3 style="font-size:35px">$<span class="di" id="accountBalance">5</span></h3>
+            <p>Account Balance</p>
+        </div>
+       
+        
+    </div>
+
+    <div class="paymentsoption">
+     <div>
+        <h3>PayPal</h3>
+        <h1 style="color:blue">Pay<span style="color:aqua">Pal</span></h1>
+        <p>Get paid by direct transfer into your<br> paypal account.</p>
+        <button><a  href="paypal.html" class="if">WITHDRAW</a></button>
+     </div>
+     <div>
+        <h3>CashApp</h3>
+        <h3 class="cashapp" ><p>
+          <svg xmlns="http://www.w3.org/2000/svg" height="33px" viewBox="0 -960 960 960" width="33px" fill="white">
+            <path d="M444-200h70v-50q50-9 86-39t36-89q0-42-24-77t-96-61q-60-20-83-35t-23-41q0-26 18.5-41t53.5-15q32 0 50 15.5t26 38.5l64-26q-11-35-40.5-61T516-710v-50h-70v50q-50 11-78 44t-28 74q0 47 27.5 76t86.5 50q63 23 87.5 41t24.5 47q0 33-23.5 48.5T486-314q-33 0-58.5-20.5T390-396l-66 26q14 48 43.5 77.5T444-252v52Zm36 120q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/></svg>
+        </p>Cash App</h3>
+        <p>Get paid by direct transfer into your<br> cashapp wallet.</p>
+        <button><a  href="cashappwallet.html" class="if">WITHDRAW</a></button>
+     </div>
+     <div>
+        <h3>PayTm</h3>
+        <h1 style="color:blue">Pay<span style="color:aqua">tm</span></h1>
+        <p>Get paid by direct transfer into your<br> paytm wallet.</p>
+        <button><a  href="paytm.html" class="if">WITHDRAW</a></button>
+     </div>
+     <div>
+        <h3>Bank Transfer</h3>
+        
+        <h5>
+          <p><svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" fill="#5f6368"><path d="M208-254v-319.33h66.67V-254H208Zm241.33 0v-319.33H516V-254h-66.67ZM80-120.67v-66.66h800v66.66H80ZM685.33-254v-319.33H752V-254h-66.67ZM80-640v-62l400-218.67L880-702v62H80Z"/></svg></p>
+          <p>
+            <span class="bank">Bank </span>
+            <span class="transfer">Transfer</span></p>
+          <p><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#808080"><path d="M208-254v-319.33h66.67V-254H208Zm241.33 0v-319.33H516V-254h-66.67ZM80-120.67v-66.66h800v66.66H80ZM685.33-254v-319.33H752V-254h-66.67ZM80-640v-62l400-218.67L880-702v62H80Z"/></svg></p></h5>
+        <p>Get paid by direct transfer into your<br> bank account.</p>
+        <button><a  href="banktransfer.html" class="if">WITHDRAW</a></button>
+     </div>
+    </div>
+
+    <div class="details">
+      <div class="copyright">
+        <h1>
+          <img
+            src="\images\favicon-32x32.png"
+            alt="Favicon"
+            style="width: 50px; height: 50px; vertical-align: middle"
+          />
+          <span style="padding-left: 0.2em"> Cash Wise</span>
+        </h1>
+        <div>
+          DollarTub-a simple way to turn your<span class="break"><br></span>
+          screen time into cash.<br /><br />
+         <span class="move-to-bottom">
+          Copyright © 2024 DollarTub Market<span class="break"><br /></span>
+          Survey (OPC) GmbH. All rights<br />
+          reserved
+        </span>
+        </div>
+      </div>
+      <div class="chidi1">
+        <h2  onclick="toggleDropdown('dropdown1')" style="color:green;">Company</h2>
+        <div id="dropdown1" class="dropdown-content">
+        <a href="#">Team</a>
+        <a href="contact.html">Contact us</a>
+      </div>
+      </div>
+      <div class="chidi">
+        <h2 class="h" onclick="toggleDropdown('dropdown2')" style="cursor: pointer; color:green;">Legal</h2>
+        <div id="dropdown2" class="dropdown-content">
+        <a href="privacy.html">Privacy policy</a>
+        <a href="terms.html">Terms of use </a>
+       
+      </div>
+      </div>
+    </div>
+    <script src="payments.js"></script>
+</body>
+</html>
